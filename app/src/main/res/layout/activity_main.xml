@@ -8,219 +8,253 @@
     tools:context=".MainActivity">
 
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_main_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="15dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_main_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="14dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp">
 
-    <ImageView
-        android:id="@+id/imageView_main_header"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/header" />
+            <FrameLayout
+                android:id="@+id/frameLayout_main_line2"
+                android:layout_width="350dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="15dp"
+                android:background="#C8C8C8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_main_family">
 
-    <ImageView
-        android:id="@+id/imageView_main_poster"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_marginStart="15dp"
-        android:adjustViewBounds="true"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_main_header"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_main_header"
-        app:srcCompat="@drawable/poster" />
+            </FrameLayout>
 
-    <TextView
-        android:id="@+id/textView_main_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:text="@string/movie"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton_main_bookmark"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_main_poster"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_main_header" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/accent"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton2"
+                app:layout_constraintEnd_toStartOf="@+id/floatingActionButton3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/floatingActionButton2"
+                app:layout_constraintTop_toTopOf="@+id/floatingActionButton2"
+                app:maxImageSize="35dp"
+                app:srcCompat="@drawable/tomato"
+                app:tint="#FFFFFF" />
 
-    <ImageButton
-        android:id="@+id/imageButton_main_bookmark"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_marginEnd="15dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_main_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView_main_title"
-        app:srcCompat="@drawable/ic_bookmark" />
+            <FrameLayout
+                android:id="@+id/frameLayout_main_line1"
+                android:layout_width="350dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="15dp"
+                android:background="#C8C8C8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_main_rent">
 
-    <TextView
-        android:id="@+id/textView_main_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:text="@string/details"
-        app:layout_constraintStart_toEndOf="@+id/imageView_main_poster"
-        app:layout_constraintTop_toBottomOf="@+id/textView_main_title" />
+            </FrameLayout>
 
-    <Button
-        android:id="@+id/button_main_rent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="10dp"
-        android:backgroundTint="@color/accent"
-        android:text="@string/rent"
-        app:layout_constraintEnd_toStartOf="@+id/button_main_buy"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_main_detail" />
+            <Button
+                android:id="@+id/button_main_buy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/accent"
+                android:text="@string/buy"
+                app:layout_constraintBottom_toBottomOf="@+id/button_main_rent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/button_main_rent" />
 
-    <Button
-        android:id="@+id/button_main_buy"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="15dp"
-        android:backgroundTint="@color/accent"
-        android:text="@string/buy"
-        app:layout_constraintBottom_toBottomOf="@+id/button_main_rent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_main_rent"
-        app:layout_constraintTop_toTopOf="@+id/button_main_rent"
-        app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/textView_main_similar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/similar"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_main_tomatoes"
+                app:layout_constraintEnd_toEndOf="@+id/floatingActionButton3"
+                app:layout_constraintStart_toStartOf="@+id/floatingActionButton3"
+                app:layout_constraintTop_toTopOf="@+id/textView_main_tomatoes" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/accent"
-        android:clickable="true"
-        android:focusable="true"
-        app:maxImageSize="35dp"
-        app:srcCompat="@drawable/ic_baseline_amp_stories_24"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="318dp"
-        tools:layout_editor_absoluteY="419dp" />
+            <TextView
+                android:id="@+id/textView_main_tomatoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rotten_tomatoes"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_main_family"
+                app:layout_constraintEnd_toEndOf="@+id/floatingActionButton"
+                app:layout_constraintStart_toStartOf="@+id/floatingActionButton"
+                app:layout_constraintTop_toTopOf="@+id/textView_main_family" />
 
-    <TextView
-        android:id="@+id/textView_main_description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/description"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteY="524dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_main_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="15dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/accent"
-        android:clickable="true"
-        android:focusable="true"
-        app:maxImageSize="35dp"
-        app:srcCompat="@drawable/tomato"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="419dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_main_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="14dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/accent"
-        android:clickable="true"
-        android:focusable="true"
-        app:srcCompat="@drawable/ic_baseline_people_24"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="419dp"
-        tools:maxImageSize="35dp" />
+            <ImageButton
+                android:id="@+id/imageButton_main_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView_main_title"
+                app:layout_constraintTop_toTopOf="@+id/textView_main_title"
+                app:srcCompat="@drawable/ic_bookmark" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton_main_ratings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/accent"
-        android:clickable="true"
-        android:focusable="true"
-        app:maxImageSize="35dp"
-        app:srcCompat="@drawable/ic_baseline_circle_24"
-        app:tint="#FFFFFF"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="419dp" />
+            <TextView
+                android:id="@+id/textView_main_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:text="@string/description"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout_main_line2" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout_main_line1"
-        android:layout_width="350dp"
-        android:layout_height="2dp"
-        android:background="#C8C8C8"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="404dp">
+            <Button
+                android:id="@+id/button_main_rent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/accent"
+                android:text="@string/rent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_main_detail" />
 
-    </FrameLayout>
+            <ImageView
+                android:id="@+id/imageView_main_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/header" />
 
-    <TextView
-        android:id="@+id/textView_main_similar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/similar"
-        tools:layout_editor_absoluteX="324dp"
-        tools:layout_editor_absoluteY="490dp" />
+            <ImageView
+                android:id="@+id/imageView_main_poster"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_main_header"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_main_header"
+                app:srcCompat="@drawable/poster"
+                tools:layout_editor_absoluteX="15dp" />
 
-    <TextView
-        android:id="@+id/textView_main_tomatoes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rotten_tomatoes"
-        tools:layout_editor_absoluteX="199dp"
-        tools:layout_editor_absoluteY="490dp" />
+            <TextView
+                android:id="@+id/textView_main_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details"
+                app:layout_constraintStart_toStartOf="@+id/textView_main_title"
+                app:layout_constraintTop_toBottomOf="@+id/textView_main_title" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout_main_line2"
-        android:layout_width="350dp"
-        android:layout_height="2dp"
-        android:background="#C8C8C8"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="598dp">
+            <TextView
+                android:id="@+id/textView_main_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/movie"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton_main_bookmark"
+                app:layout_constraintStart_toEndOf="@+id/imageView_main_poster"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_main_header" />
 
-    </FrameLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/accent"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+                app:maxImageSize="35dp"
+                app:srcCompat="@drawable/ic_baseline_amp_stories_24"
+                app:tint="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/textView_main_family"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/family"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="490dp" />
+            <TextView
+                android:id="@+id/textView_main_family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/family"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_main_ratings"
+                app:layout_constraintEnd_toEndOf="@+id/floatingActionButton2"
+                app:layout_constraintStart_toStartOf="@+id/floatingActionButton2"
+                app:layout_constraintTop_toTopOf="@+id/textView_main_ratings" />
 
-    <TextView
-        android:id="@+id/textView_main_ratings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:foregroundGravity="top|center_vertical|center_horizontal"
-        android:text="@string/ratings"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="490dp" />
+            <TextView
+                android:id="@+id/textView_main_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="top|center_vertical|center_horizontal"
+                android:text="@string/ratings"
+                app:layout_constraintEnd_toEndOf="@+id/floatingActionButton_main_ratings"
+                app:layout_constraintStart_toStartOf="@+id/floatingActionButton_main_ratings"
+                app:layout_constraintTop_toBottomOf="@+id/floatingActionButton_main_ratings" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/accent"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton_main_ratings"
+                app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/floatingActionButton_main_ratings"
+                app:layout_constraintTop_toTopOf="@+id/floatingActionButton_main_ratings"
+                app:srcCompat="@drawable/ic_baseline_people_24"
+                app:tint="#FFFFFF"
+                tools:maxImageSize="35dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton_main_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/accent"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout_main_line1"
+                app:maxImageSize="35dp"
+                app:srcCompat="@drawable/ic_baseline_circle_24"
+                app:tint="#FFFFFF" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
