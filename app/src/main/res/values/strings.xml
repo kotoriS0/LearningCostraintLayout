@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">LearningCostraintLayout</string>
+    <string name="movie">Beauty and the Beast</string>
+    <string name="details">March 2017 | PG | 129 minutes</string>
+    <string name="rent">Rent from $2.99</string>
+    <string name="buy">Buy from $10.99</string>
+    <string name="ratings">Ratings</string>
+    <string name="family">Family</string>
+    <string name="rotten_tomatoes">Rotten Tomatoes</string>
+    <string name="similar">Similar</string>
+    <string name="description">The story and characters you know and love come to spectacular life in the live-action adaption of Disney\'s animated classic Beauty and the Beast.</string>
 </resources>
